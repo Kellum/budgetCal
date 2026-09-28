@@ -195,3 +195,22 @@ maths agree.
   sidebar. Revisit if testing shows people hunting for them.
 - **Paycheck changes still come to you.** When a limit changes take-home, the notice appears on Today and
   in the calendar on that day. Only the detail lives in the menu.
+
+### Collapsing and focus (September 28, 2026)
+
+Purpose: screen space on desktop, plus a one-key focus mode. Not a customisable dashboard.
+
+- **Collapsible:** the balance chart (desktop and phone) and the desktop Plan panel. Nothing else for now.
+- **Collapse to a summary, never to nothing.** A collapsed section keeps one line with its meaning:
+  the chart becomes a sparkline plus "Low −$450 on Oct 1 · below $0 on 3 stretches in 90 days"; the
+  Plan becomes "11 rules · $3,857 in · $3,766 out · $400 saved a month". Summaries update live, so a new
+  dip below the cushion still shows while collapsed.
+- **Never collapsible:** the verdict sentence and balance freshness. Hiding the answer or the age of the
+  balance would hide a warning, which the product never does.
+- **Focus (F on desktop):** collapses everything except the calendar, which takes the full height; the
+  verdict stays as a single line. F again restores the previous layout. A visible "Focus on · Exit"
+  control, never a hidden state.
+- **Remembered per device, not synced:** layout is a preference of that screen, not data.
+- **Accessible:** headers are real buttons with aria-expanded; short height animation, none with
+  reduced motion.
+- **Deferred:** reordering and resizing sections. Revisit only if collapse and focus are not enough.

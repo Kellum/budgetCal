@@ -1,0 +1,19 @@
+{
+  "name": "US Federal Reserve holidays",
+  "source": "https://www.federalreserve.gov/aboutthefed/k8.htm",
+  "notes": "Rules, not dates. A holiday on Sunday is observed Monday. A holiday on Saturday is not observed: Federal Reserve Banks stay open the Friday before.",
+  "observance": { "saturday": "none", "sunday": "next-monday" },
+  "rules": [
+    { "name": "New Year's Day", "type": "fixed", "month": 1, "day": 1 },
+    { "name": "Birthday of Martin Luther King, Jr.", "type": "nth-weekday", "month": 1, "weekday": 1, "nth": 3 },
+    { "name": "Washington's Birthday", "type": "nth-weekday", "month": 2, "weekday": 1, "nth": 3 },
+    { "name": "Memorial Day", "type": "nth-weekday", "month": 5, "weekday": 1, "nth": "last" },
+    { "name": "Juneteenth National Independence Day", "type": "fixed", "month": 6, "day": 19, "fromYear": 2022 },
+    { "name": "Independence Day", "type": "fixed", "month": 7, "day": 4 },
+    { "name": "Labor Day", "type": "nth-weekday", "month": 9, "weekday": 1, "nth": 1 },
+    { "name": "Columbus Day", "type": "nth-weekday", "month": 10, "weekday": 1, "nth": 2 },
+    { "name": "Veterans Day", "type": "fixed", "month": 11, "day": 11 },
+    { "name": "Thanksgiving Day", "type": "nth-weekday", "month": 11, "weekday": 4, "nth": 4 },
+    { "name": "Christmas Day", "type": "fixed", "month": 12, "day": 25 }
+  ]
+}

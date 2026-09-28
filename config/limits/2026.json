@@ -1,0 +1,51 @@
+{
+  "year": 2026,
+  "units": "whole US dollars",
+  "notes": "Update every year from the IRS and SSA announcements. 'verified' is the date a person checked the value against the source, or null if it has not been checked. Nothing in the engine hardcodes these values.",
+  "limits": {
+    "401k-elective": {
+      "kind": "contribution",
+      "label": "401(k), 403(b) and 457 elective deferrals (traditional and Roth combined)",
+      "base": 24500,
+      "catchUps": [
+        { "fromAge": 50, "toAge": 59, "amount": 8000 },
+        { "fromAge": 60, "toAge": 63, "amount": 11250 },
+        { "fromAge": 64, "amount": 8000 }
+      ],
+      "source": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+      "verified": "2026-09-28"
+    },
+    "hsa-self": {
+      "kind": "contribution",
+      "label": "HSA, self-only coverage",
+      "base": 4400,
+      "catchUps": [{ "fromAge": 55, "amount": 1000 }],
+      "source": "https://www.irs.gov/publications/p969",
+      "verified": "2026-09-28"
+    },
+    "hsa-family": {
+      "kind": "contribution",
+      "label": "HSA, family coverage",
+      "base": 8750,
+      "catchUps": [{ "fromAge": 55, "amount": 1000 }],
+      "source": "https://www.irs.gov/publications/p969",
+      "verified": "2026-09-28"
+    },
+    "ira": {
+      "kind": "contribution",
+      "label": "Traditional and Roth IRA (combined)",
+      "base": 7500,
+      "catchUps": [{ "fromAge": 50, "amount": 1100 }],
+      "source": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+      "verified": "2026-09-28"
+    },
+    "ss-wage-base": {
+      "kind": "wage-cap",
+      "label": "Social Security taxable wage base (per employer)",
+      "base": 184500,
+      "catchUps": [],
+      "source": "https://www.ssa.gov/oact/cola/cbb.html",
+      "verified": null
+    }
+  }
+}

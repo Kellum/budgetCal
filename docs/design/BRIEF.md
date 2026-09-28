@@ -186,3 +186,12 @@ Fifteen screens in five rows: the daily check-in (including a stale balance and 
 payday), calendar and "can I move this?", four-step setup, desktop arrange and rules table, and
 paycheck and sync. All numbers come from the engine running a sample plan, so the wireframes and the
 maths agree.
+
+### D2 decisions (September 28, 2026)
+
+- **The home screen leads correctly:** verdict sentence, then balance line, then the next 14 days.
+- **Phone tabs: Today, Calendar, Plan, More.** Pay details live under More › Personal › Pay details, not
+  a tab: people set them up once and rarely return. Desktop keeps them under Settings, out of the
+  sidebar. Revisit if testing shows people hunting for them.
+- **Paycheck changes still come to you.** When a limit changes take-home, the notice appears on Today and
+  in the calendar on that day. Only the detail lives in the menu.

@@ -1,0 +1,70 @@
+{
+  "format": "budgetcal",
+  "schemaVersion": 1,
+  "exportedAt": "2026-09-28T14:02:11.000Z",
+  "appVersion": "0.1.0",
+  "data": {
+    "schemaVersion": 1,
+    "records": [
+      { "type": "settings", "id": "settings", "hlc": "001790604000000:000000:phone", "deleted": false, "birthYear": 1992, "horizonDays": 90 },
+      { "type": "account", "id": "checking", "hlc": "001790604000000:000001:phone", "deleted": false, "name": "Checking", "threshold": 30000, "order": 0 },
+      { "type": "account", "id": "savings", "hlc": "001790604000000:000002:phone", "deleted": false, "name": "Savings", "threshold": 0, "order": 1 },
+      {
+        "type": "rule", "id": "paycheck", "hlc": "001790604000000:000003:phone", "deleted": false,
+        "name": "Paycheck", "kind": "income", "account": "checking", "amount": 178000,
+        "schedule": { "kind": "weekly", "start": "2026-10-02", "interval": 2 },
+        "adjust": "before", "paused": false,
+        "paycheck": {
+          "gross": 250000,
+          "lines": [
+            { "id": "401k", "name": "401(k)", "stage": "pretax", "amount": { "type": "percent", "bp": 500, "of": "gross" }, "reduces": ["income"], "limit": "401k-elective", "ytd": { "asOf": "2026-09-18", "amount": 225000 } },
+            { "id": "health", "name": "Medical", "stage": "pretax", "amount": { "type": "fixed", "cents": 9800 }, "reduces": ["income", "fica"] },
+            { "id": "federal", "name": "Federal", "stage": "tax", "amount": { "type": "percent", "bp": 1000, "of": "income" } },
+            { "id": "ss", "name": "Social Security", "stage": "tax", "amount": { "type": "percent", "bp": 620, "of": "fica" }, "wageCap": "ss-wage-base" },
+            { "id": "medicare", "name": "Medicare", "stage": "tax", "amount": { "type": "percent", "bp": 145, "of": "fica" } }
+          ]
+        }
+      },
+      {
+        "type": "rule", "id": "rent", "hlc": "001790604000000:000004:phone", "deleted": false,
+        "name": "Rent", "kind": "expense", "account": "checking", "amount": 185000,
+        "schedule": { "kind": "monthly", "start": "2026-01-01", "interval": 1, "days": [1] },
+        "adjust": "after", "paused": false
+      },
+      {
+        "type": "rule", "id": "save", "hlc": "001790604000000:000005:phone", "deleted": false,
+        "name": "To savings", "kind": "transfer", "account": "checking", "toAccount": "savings", "amount": 10000,
+        "schedule": { "kind": "monthly", "start": "2026-01-01", "interval": 1, "days": [15, "last"] },
+        "adjust": "after", "paused": false
+      },
+      {
+        "type": "rule", "id": "roth-ira", "hlc": "001790604000000:000006:phone", "deleted": false,
+        "name": "Roth IRA", "kind": "transfer", "account": "checking", "amount": 30000,
+        "schedule": { "kind": "monthly", "start": "2026-01-01", "interval": 1, "days": [16] },
+        "adjust": "after", "paused": false, "note": "Self-initiated, so it is a calendar event."
+      },
+      {
+        "type": "rule", "id": "car-insurance", "hlc": "001790604000000:000007:phone", "deleted": false,
+        "name": "Car insurance", "kind": "expense", "account": "checking", "amount": 64000,
+        "schedule": { "kind": "yearly", "start": "2026-01-01", "interval": 1, "month": 12, "day": 3 },
+        "adjust": "none", "paused": false
+      },
+      {
+        "type": "rule", "id": "haircut", "hlc": "001790604000000:000008:phone", "deleted": false,
+        "name": "Haircut", "kind": "expense", "account": "checking", "amount": 4500,
+        "schedule": { "kind": "monthly-weekday", "start": "2026-01-01", "interval": 2, "nth": "last", "weekday": 6, "count": 12 },
+        "adjust": "none", "paused": true
+      },
+      {
+        "type": "rule", "id": "tax-refund", "hlc": "001790604000000:000009:phone", "deleted": false,
+        "name": "Tax refund", "kind": "income", "account": "checking", "amount": 42000,
+        "schedule": { "kind": "once", "start": "2027-03-01" },
+        "adjust": "none", "paused": false
+      },
+      { "type": "balance", "id": "b-1", "hlc": "001790604000000:00000a:phone", "deleted": false, "account": "checking", "date": "2026-09-28", "amount": 90000, "clearedKeys": [] },
+      { "type": "balance", "id": "b-2", "hlc": "001790604000000:00000b:phone", "deleted": false, "account": "savings", "date": "2026-09-01", "amount": 100000, "clearedKeys": [] },
+      { "type": "override", "id": "plan:rent@2026-11-01", "hlc": "001790604000000:00000c:laptop", "deleted": false, "layer": "plan", "key": "rent@2026-11-01", "date": "2026-11-03" },
+      { "type": "override", "id": "whatIf:save@2026-10-15", "hlc": "001790604000000:00000d:laptop", "deleted": false, "layer": "whatIf", "key": "save@2026-10-15", "skip": true }
+    ]
+  }
+}

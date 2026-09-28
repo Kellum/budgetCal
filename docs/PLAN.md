@@ -335,7 +335,7 @@ local `wrangler dev` relay.
 |---|---|---|
 | Engine, example-based | Vitest | tables of edge cases: window boundaries, leap days, year crossings, 26 vs 27 biweekly paydays, day 29–31 in short months, weekend moves across month ends, holidays, count/end on an occurrence |
 | Engine, properties | fast-check | **oracle equivalence** against a deliberately naive day-by-day implementation using `Date.UTC`; window-split invariance; phase-shift invariance; constant spacing and weekday; one occurrence per qualifying month; balance = anchor + Σ events; rule order irrelevant; conservation across transfers |
-| Engine, mutation | Stryker | score threshold enforced in CI: the answer to "would the suite catch a silent off-by-one?" |
+| Engine, mutation | Stryker (command runner) | ~1,500 deliberate bugs, nightly in CI, fails below 80%: the answer to "would the suite catch a silent off-by-one?" |
 | Model | Vitest | schema fixtures per version migrate and round-trip; malformed input rejected |
 | Web | Playwright on Chromium + WebKit | persistence across reload, drag-to-move, template import, export → wipe → import, offline, and **zero requests to any non-self origin** |
 | Visual | Playwright screenshots | once a screen is approved in design review |

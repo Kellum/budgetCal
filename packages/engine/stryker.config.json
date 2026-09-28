@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "The command runner reruns the engine suite per mutant. The vitest-runner plugin (10.0.0) failed to activate mutants in some modules, silently reporting them as survivors, so it is not used. inPlace because tests read ../../config.",
+  "testRunner": "command",
+  "commandRunner": { "command": "npx vitest run --bail 1" },
+  "coverageAnalysis": "off",
+  "inPlace": true,
+  "mutate": ["src/**/*.ts", "!src/index.ts", "!src/types.ts"],
+  "reporters": ["clear-text", "html", "json"],
+  "htmlReporter": { "fileName": "reports/mutation/index.html" },
+  "jsonReporter": { "fileName": "reports/mutation/mutation.json" },
+  "thresholds": { "high": 90, "low": 80, "break": 80 },
+  "concurrency": 4,
+  "timeoutMS": 120000
+}

@@ -214,3 +214,22 @@ Purpose: screen space on desktop, plus a one-key focus mode. Not a customisable 
 - **Accessible:** headers are real buttons with aria-expanded; short height animation, none with
   reduced motion.
 - **Deferred:** reordering and resizing sections. Revisit only if collapse and focus are not enough.
+
+## 12. D3 visual directions
+
+Published as a design canvas (private until shared): https://claude.ai/artifact/TooF42PrUzzyNpTKw4bM3J
+
+Three directions on the same Today screen and data, each in light and dark, plus a system sheet (type,
+palette, how "short" is shown). All three are built from one shared screen driven by each direction's
+tokens, so the comparison is like for like.
+
+| | Grove (A) | Ledger (B) | Dusk (C) |
+|---|---|---|---|
+| Feel | Warm, reassuring | Precise, utilitarian | Calm, cool |
+| Orange's job | Brand + main action | Brand mark + top rule only | Brand + "now" (today marker) |
+| Short shown as | Berry | True red + hatch | Violet + hatch |
+| Type | Fraunces / Instrument Sans | Geist / Geist Mono | Figtree |
+
+Checked for every direction and theme: text 4.5:1, chart marks 3:1, and the "short" colour at least 15
+apart (OKLab ×100) from the brand orange for normal vision and colour-vision deficiencies. Ledger's first
+dark palette failed that check (red vs orange, 8 apart); its dark orange now leans amber (#F28C28).

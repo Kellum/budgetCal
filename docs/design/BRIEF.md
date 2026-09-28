@@ -163,7 +163,26 @@ text (Dynamic Type) · dark mode · the smallest supported phone (iPhone SE widt
   typeface, colour logic, density and how the balance line is drawn, with reasons. You pick one or
   combine them.
 
-### Questions for D3 (not blocking D2)
-1. Does the product have a name yet? It affects the logo mark, the app icon and the tone of the header.
-2. Any colours you love or can't stand?
-3. Light first, dark first, or equal?
+### Decided for D3 (September 28, 2026)
+
+- **Working name: Citrus.**
+- **Orange is identity, not function.** It carries the brand (mark, app icon, splash, marketing) and
+  appears in the product only where it earns a job. It is never a status colour.
+- **Orange never means "warning".** Orange reads as caution almost everywhere, so if it also marked
+  "below your cushion", the brand would feel like a permanent alarm. Status colours are chosen
+  separately in D3 and must be clearly distinct from the brand orange in both hue and lightness. They
+  are never the only signal: patterns, labels and position carry the meaning too.
+- **The supporting palette derives from the orange.** Neutrals are warmed slightly toward it, and any
+  secondary accent is chosen to sit beside it, not compete with it.
+- **Light and dark ship together** and are tested throughout, from D4's first component onward. Every
+  token has both values; neither theme is an afterthought.
+
+## 11. D2 wireframes
+
+Published as a design canvas (private until shared from its Share menu):
+https://claude.ai/artifact/UEtVb1RTHpk41CWCZSZE8r
+
+Fifteen screens in five rows: the daily check-in (including a stale balance and updating a balance on a
+payday), calendar and "can I move this?", four-step setup, desktop arrange and rules table, and
+paycheck and sync. All numbers come from the engine running a sample plan, so the wireframes and the
+maths agree.

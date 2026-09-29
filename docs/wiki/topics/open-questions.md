@@ -13,3 +13,14 @@
    Pay details (waterfall) only for jobs. Open: which types in v1, whether "varies" amounts need a
    range, and whether support/alimony need any special handling (e.g. taxable vs not is advice-adjacent:
    likely just a label).
+5. **Plaid, balance only (later paid tier, FOUNDATION §6/§12 step 7).** Pull only the account balance
+   (Plaid Balance product), never transactions, to fill the "balance right now" anchor automatically.
+   Privacy tension to resolve: Plaid access tokens cannot live in the browser, so this needs our server
+   to hold tokens and call Plaid — the first time *financial data* passes through us. Options to weigh:
+   (a) server fetches balance and forwards it without storing it (still sees it in transit);
+   (b) server encrypts the balance to the user's device key before forwarding (server sees it briefly in
+   memory, stores nothing); (c) keep manual entry as the default and make linking opt-in per account,
+   clearly labelled "your bank balance passes through our server". Also: Plaid itself sees the bank
+   login (their privacy terms apply), per-Item monthly cost means never grandfathered (§9), token
+   rotation, incident plan, Plaid production review. Open: is balance-only worth breaking "nothing
+   leaves your device" for opted-in users, and which option (a/b/c).

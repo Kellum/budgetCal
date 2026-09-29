@@ -1,14 +1,14 @@
 # Citrus (working name) — cashflow calendar
 
-Start every session by reading `docs/CHECKPOINT.md` (latest state and next steps), then `docs/PLAN.md`
-(agreed plan, engine rules) and `docs/design/BRIEF.md` (design rules). `docs/FOUNDATION.md` is the
-original decision record.
+Start every session by reading **only** `docs/wiki/INDEX.md`. Open a topic page or a section of
+PLAN.md / BRIEF.md only when the task needs it. Never read `docs/wiki/sessions/` unless asked.
 
 ## Working agreement
 - The owner reviews at every stage boundary. Stop there; don't run ahead.
 - Recommend, don't list menus. Ask only questions that change the architecture.
-- At the end of a session, or when the owner says "checkpoint", update `docs/CHECKPOINT.md`
-  (newest session first) and commit it.
+- When the owner says "checkpoint" (or at session end): write `docs/wiki/sessions/<date>.md`, update the
+  affected topic pages and `open-questions.md`, rewrite the "Now" section of `INDEX.md` (keep it short),
+  and commit.
 
 ## Hard rules (from FOUNDATION)
 - No bank linking, accounts, analytics. Numbers never leave the device unencrypted.

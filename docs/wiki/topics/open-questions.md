@@ -52,3 +52,8 @@
    Basic tier; its Premium tier links via an aggregator for transactions, US/Canada only — per its FAQ,
    calendarbudget.com/troubleshooting, checked Sep 29, 2026). SimpleFIN stays on the research list
    (user pays SimpleFIN directly; confirm no approval needed for us and whether it works serverless).
+8. **Viability without linking.** Core is a projection tool by design (FOUNDATION §2). Evidence for:
+   CalendarBudget's manual free tier, YNAB's manual years, spreadsheet users. Real risk is habit
+   (balance going stale), so item 6 friction reducers are the most important v1 features. Test: owner
+   uses it 60 days, then 10–20 beta users; viability metric = still updating balance at least weekly
+   after week 3. Linking later plugs in as another balance-entry source (engine already agnostic).

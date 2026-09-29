@@ -5,7 +5,8 @@ Read this page only. Open a linked page when the task needs it. Keep this page u
 ## Now
 - **Stage:** 1 (engine + data format) done. Design D1, D2 done; D3 directions under review.
 - **Next:** owner picks the "short" colour (violet recommended) for Dusk-light + Ledger-dark,
-  confirms the tax/stub proposals, then D4 design system, then stage 2 (calendar UI).
+  confirms the tax/stub proposals, reviews income types (q4) and balance friction (q6), then D4 design
+  system, then stage 2 (calendar UI). No bank linking in v1 (q7).
 
 ## Open questions → `topics/open-questions.md`
 ## Topic pages (open only when relevant)

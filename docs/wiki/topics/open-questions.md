@@ -46,3 +46,9 @@
      Verify CORS, bank coverage; ignore transactions. If it needs a relay, no privacy gain over Plaid.
    - Later paid tier: Plaid balance-only (item 5).
    - Long term: US open-banking data-rights rule (timeline uncertain); native wrapper for widgets/Shortcuts.
+7. **Decision (Sep 29): no Plaid until an LLC exists and the app proves viable.** Owner is a sole
+   individual building this as a project first. v1 = no bank linking: friction reducers (item 6) plus
+   possibly **CSV import of bank exports** as a manual catch-up (CalendarBudget offers this in its free
+   Basic tier; its Premium tier links via an aggregator for transactions, US/Canada only — per its FAQ,
+   calendarbudget.com/troubleshooting, checked Sep 29, 2026). SimpleFIN stays on the research list
+   (user pays SimpleFIN directly; confirm no approval needed for us and whether it works serverless).

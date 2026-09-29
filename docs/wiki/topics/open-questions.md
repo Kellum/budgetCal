@@ -31,6 +31,12 @@
    request logging off. Honest claim: "passes through our server encrypted, never stored, never linked
    to your name or email; balances only". NOT "we never see it" (it is in server memory briefly), and
    Plaid itself knows the user.
+   **Correction for Plaid policy** (access tokens must never be usable client-side): the server holds
+   one encryption key and no tokens; the device holds the encrypted token but cannot decrypt it; each
+   request the server decrypts in memory, calls Plaid, forgets. Same privacy, passes review.
+   **Approval:** Sandbox (free, fake data) → Trial (real data, ≤10 Items, per FOUNDATION §6, verify) →
+   Production application (business entity, use case, security questionnaire; days–weeks; some banks
+   add their own OAuth registration). Re-verify all of this at plaid.com before building.
 6. **Balance friction ("close app, open bank, come back").** Recommended layers:
    - v1, no linking: clipboard paste detection ("Use $1,367.37 from your clipboard?"); a "daily spending"
      rule so the projection expects everyday spending and re-anchoring can be weekly; optional quick

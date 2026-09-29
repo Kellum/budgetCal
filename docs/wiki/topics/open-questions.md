@@ -24,3 +24,12 @@
    login (their privacy terms apply), per-Item monthly cost means never grandfathered (§9), token
    rotation, incident plan, Plaid production review. Open: is balance-only worth breaking "nothing
    leaves your device" for opted-in users, and which option (a/b/c).
+6. **Balance friction ("close app, open bank, come back").** Recommended layers:
+   - v1, no linking: clipboard paste detection ("Use $1,367.37 from your clipboard?"); a "daily spending"
+     rule so the projection expects everyday spending and re-anchoring can be weekly; optional quick
+     "I spent $X"; ask for a fresh balance only when stale *and* a bill/dip is near.
+   - Research before launch: **SimpleFIN Bridge** (user pays ~$15/yr, pastes a token). If it allows
+     direct browser requests (CORS), the device fetches balances itself and our server never sees them.
+     Verify CORS, bank coverage; ignore transactions. If it needs a relay, no privacy gain over Plaid.
+   - Later paid tier: Plaid balance-only (item 5).
+   - Long term: US open-banking data-rights rule (timeline uncertain); native wrapper for widgets/Shortcuts.

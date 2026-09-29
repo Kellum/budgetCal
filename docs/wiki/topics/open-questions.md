@@ -23,7 +23,14 @@
    clearly labelled "your bank balance passes through our server". Also: Plaid itself sees the bank
    login (their privacy terms apply), per-Item monthly cost means never grandfathered (§9), token
    rotation, incident plan, Plaid production review. Open: is balance-only worth breaking "nothing
-   leaves your device" for opted-in users, and which option (a/b/c).
+   leaves your device" for opted-in users, and which option (a/b/c/d).
+   (d) **Stateless, unlinkable relay (owner's preferred direction):** the Plaid access token is stored
+   only on the device, encrypted; the device sends it per request; the server decrypts in memory,
+   calls balance only (never Identity/Transactions), encrypts the result to the device key, returns,
+   forgets. No server database of Items or names; paid licence kept unlinkable from bank connections;
+   request logging off. Honest claim: "passes through our server encrypted, never stored, never linked
+   to your name or email; balances only". NOT "we never see it" (it is in server memory briefly), and
+   Plaid itself knows the user.
 6. **Balance friction ("close app, open bank, come back").** Recommended layers:
    - v1, no linking: clipboard paste detection ("Use $1,367.37 from your clipboard?"); a "daily spending"
      rule so the projection expects everyday spending and re-anchoring can be weekly; optional quick
